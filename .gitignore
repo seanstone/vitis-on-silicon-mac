@@ -2,3 +2,9 @@
 *.bin
 /Xilinx/
 /installer/
+/.cache/
+/.java/
+/.Xilinx/
+*.str
+*.jou
+*.log
