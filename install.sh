@@ -51,7 +51,7 @@ f_echo "Building Docker image"
 docker build -t x64-linux .
 
 # Copy Vivado installation file into $script_dir
-installation_binary=""
+installation_binary="FPGAs_AdaptiveSoCs_Unified_2023.2_1013_2256_Lin64.bin"
 while ! [[ $installation_binary == *.bin ]]
 do
 	f_echo "Drag and drop the installation binary into this terminal window and press Enter: "
