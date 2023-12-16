@@ -65,7 +65,7 @@ f_echo "Launching Docker container and installation script"
 
 # Create App icon
 f_echo "Generating App icon"
-input_file=$(find Xilinx/Vivado/*/doc/images/vivado_logo.png)
+input_file=$(find xlnx_logo-256x256.png)
 mkdir icon.iconset
 sips -z 16 16 "$input_file" --out "icon.iconset/icon_16x16.png"
 sips -z 32 32 "$input_file" --out "icon.iconset/icon_16x16@2x.png"

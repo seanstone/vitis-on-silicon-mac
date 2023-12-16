@@ -21,7 +21,7 @@ fi
 # Check if the Web Installer is present
 numberOfInstallers=0
 
-for f in /home/user/Xilinx*.bin; do
+for f in /home/user/*.bin; do
 	((numberOfInstallers++))
 done
 
@@ -36,21 +36,14 @@ fi
 
 cd /home/user
 
-VIVADO_VERSION=0
-# checking version
-if [[ $(md5sum -b /home/user/Xilinx*.bin) =~ "e47ad71388b27a6e2339ee82c3c8765f" ]]
-then
-	VIVADO_VERSION=2023
-else
-	VIVADO_VERSION=2022
-fi
+VIVADO_VERSION=2023
 
 echo $VIVADO_VERSION
 
 # Extract installer
 f_echo "Extracting installer"
-chmod +x /home/user/Xilinx*.bin
-/home/user/Xilinx*.bin --target /home/user/installer --noexec
+chmod +x /home/user/*.bin
+/home/user/*.bin --target /home/user/installer --noexec
 
 # Get AuthToken by repeating the following command until it succeeds
 f_echo "Log into your Xilinx account to download the necessary files."
