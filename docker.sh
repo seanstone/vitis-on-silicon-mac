@@ -6,7 +6,7 @@ function f_echo {
 }
 
 # Check for previous installation
-if [ -d "/home/user/Xilinx/" ]
+if [ -d "/tools/Xilinx/" ]
 	then
 		f_echo "Previous installation found. To continue, please remove the Xilinx directory."
 		exit 1
